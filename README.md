@@ -25,7 +25,7 @@ LLARVA is licensed under the [Apache](LICENSE), however portions of the project 
 
 
 ## How to get support from us?
-If you have any general questions, feel free to email us at [Dantong Niu](mailto:bias_88@berkeley.edu), erkeley.edu). If you have code or implementation-related questions, please feel free to send emails to us or open an issue in this codebase (We recommend that you open an issue in this codebase, because your questions may help others). 
+If you have any general questions, feel free to email us at [Dantong Niu](mailto:bias_88@berkeley.edu)). If you have code or implementation-related questions, please feel free to send emails to us or open an issue in this codebase (We recommend that you open an issue in this codebase, because your questions may help others). 
 
 ## Citation
 If you find our work inspiring or use our codebase in your research, please consider giving a star ⭐ and a citation.
