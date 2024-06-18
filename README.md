@@ -30,13 +30,10 @@ If you have any general questions, feel free to email us at [Dantong Niu](mailto
 ## Citation
 If you find our work inspiring or use our codebase in your research, please consider giving a star ⭐ and a citation.
 ```
-@misc{?,
-      title={?}, 
-      author={?},
-      year={2023},
-      eprint={2312.17243},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@misc{niu2024llarva,
+      title={LLARVA: Vision-Action Instruction Tuning Enhances Robot Learning}, 
+      author={Dantong Niu and Yuvan Sharma and Giscard Biamby and Jerome Quenum and Yutong Bai and Baifeng Shi and Trevor Darrell and Roei Herzig},
+      year={2024}
 }
 ```
 
