@@ -7,16 +7,22 @@ In recent years, instruction-tuned Large Multimodal Models (LMMs) have been succ
 > [Dantong Niu*](https://scholar.google.com/citations?user=AzlUrvUAAAAJ&hl=en), Yuvan Sharma*, [Gicard Biamby](https://scholar.google.com/citations?user=s0Fof5IAAAAJ&hl=en), [Jerome Quenum](https://people.eecs.berkeley.edu/~jquenum/), [Yutong Bai](https://yutongbai.com/), [Biafeng Shi](https://bfshi.github.io/),
 > [Trevor Darrell†](https://people.eecs.berkeley.edu/~trevor/), [Roei Herzig†](https://roeiherz.github.io/)      
 > Berkeley AI Research, UC Berkeley    
-
-[comment]: <> (> CVPR 2024    )
+> CoRL 2024
 
 [project page](https://llarva24.github.io/) | [arxiv](https://arxiv.org/abs/2312.17243) | [bibtex](#citation)
 
 
+## Release
+
+- [2024/10/19] 🔥 Release the instruction tuning Dataset of **LLARVA**. Including 8.5M image-visual trace pairs from [OXE](https://github.com/google-deepmind/open_x_embodiment).
+
+
+
 ## Vision-Action Tuning Dataset
-<p align="center"> <img src='docs/dataset.jpg' align="center" > </p>
-For the pre-training of LLARVA, we generate 8.5M image-visual trace pairs from the Open X-Embodiment (OXE) dataset. Our dataset consists of images from a diverse collection of 37 OXE subsets with 13 different robots, including a wide assortment of tasks, environments, cameras (and thus images), and end-effectors, among other factors. For each image in an episode, we calculate the 2-D visual trace of the end-effector 
-. For this purpose, we use a bounding box detector that is trained specifically on each of the different end-effectors in OXE.
+See [DATASET.md](https://github.com/Dantong88/LLARVA/blob/main/docs/DATASET.md)
+
+## Vision-Action Instruction Pre-training
+For the vision-action instruction pre-training, the implementation is built based on [LLAVA]()
 
 
 
