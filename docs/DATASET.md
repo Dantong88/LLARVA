@@ -6,10 +6,10 @@ For the pre-training of LLARVA, we generate 8.5M image-visual trace pairs from t
 
 ### Instruction Tuning Dataset
 We release our pre-training annotations built on top of [Open-X Embodiment](https://github.com/google-deepmind/open_x_embodiment). We extract the [RLDS](https://github.com/google-research/rlds#dataset-format) format
-demonstrations and transfer them to the annotation format using in [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/Data.md). You are feel to download the [images.tar.gz](https://drive.google.com/file/d/1M6DEuU8pQ9n94lcjKIxQuIFPMx0NXJiE/view?usp=sharing) and the instruction tuning json file [train/validation annotations](https://drive.google.com/drive/folders/1du-MdMQfL5x-lsjnQ9ig1b5ddxxl8xR0?usp=sharing). The instruction tuning data format:
+demonstrations and transfer them to the annotation format using in [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/Data.md). You can download the [images.tar.gz](https://drive.google.com/file/d/1M6DEuU8pQ9n94lcjKIxQuIFPMx0NXJiE/view?usp=sharing) and the instruction tuning json file [train/validation annotations](https://drive.google.com/drive/folders/1du-MdMQfL5x-lsjnQ9ig1b5ddxxl8xR0?usp=sharing). The instruction tuning data format:
 
 ```angular2html
-train/val.son
+train/val.json
 │ 
 └── image/instruction pair 1
 │   ├── conversations 
