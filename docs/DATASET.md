@@ -1,5 +1,5 @@
 ## Vision-Action Tuning Dataset
-<p align="center"> <img src='docs/dataset.jpg' align="center" > </p>
+<p align="center"> <img src='dataset.jpg' align="center" > </p>
 For the pre-training of LLARVA, we generate 8.5M image-visual trace pairs from the Open X-Embodiment (OXE) dataset. Our dataset consists of images from a diverse collection of 37 OXE subsets with 13 different robots, including a wide assortment of tasks, environments, cameras (and thus images), and end-effectors, among other factors. For each image in an episode, we calculate the 2-D visual trace of the end-effector 
 . For this purpose, we use a bounding box detector that is trained specifically on each of the different end-effectors in OXE.
 

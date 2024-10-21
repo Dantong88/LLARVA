@@ -20,3 +20,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     merge_lora(args)
+
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--model-path", type=str, default='/home/niudt/llava-v1.5-7b-lora_exp5_fine-tuning_April29', required=False)
+    # parser.add_argument("--model-base", type=str, required=False, default='lmsys/vicuna-7b-v1.5')
+    # parser.add_argument("--save-model-path", type=str, required=False, default='/home/niudt/tmp/llarva_release_test')
+    #
+    # args = parser.parse_args()
+    #
+    # merge_lora(args)
