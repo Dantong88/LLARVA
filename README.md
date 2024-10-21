@@ -22,7 +22,7 @@ In recent years, instruction-tuned Large Multimodal Models (LMMs) have been succ
 See [DATASET.md](https://github.com/Dantong88/LLARVA/blob/main/docs/DATASET.md)
 
 ## Vision-Action Instruction Pre-training
-For the vision-action instruction pre-training, the implementation is built based on [LLAVA]()
+
 
 
 
