@@ -16,7 +16,7 @@ In recent years, instruction-tuned Large Multimodal Models (LMMs) have been succ
 
 - [2024/10/19] 🔥 Release the instruction tuning Dataset of **LLARVA**. Including 8.5M image-visual trace pairs from [OXE](https://github.com/google-deepmind/open_x_embodiment).
 Release our [End-Effector Detector](https://github.com/Dantong88/Gripper_detector). 
-- [2024/10/20] 🔥 Release the vision-action instruction tuning model.
+- [2024/10/20] 🔥 Release the vision-action instruction pre-training model.
 
 
 

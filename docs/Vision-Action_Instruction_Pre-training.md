@@ -70,7 +70,7 @@ We release our weights as follows (this is the un-merged lora weights, i.e. you 
 <!-- ROW: retinanet_R_50_FPN_1x -->
 <tr><td align="left">LLARVA</td>
 <td align="center">7b</td>
-<td align="center"><a href="https://github.com/Dantong88/LLARVA/blob/main/docs/DATASET.md">OXE Vision-Action Instruction Tuning Dataset</a></td>
+<td align="center"><a href="https://github.com/Dantong88/LLARVA/blob/main/docs/DATASET.md">OXE Vision-Action Instruction Pre-training Dataset</a></td>
 <td align="center">Vicuna-7B</td>
 <td align="center"><a href="https://drive.google.com/drive/folders/1BOWZn-jFdLLzutXWZmdit3cDv8qXezs8?usp=sharing">Model</a></td>
 </tr>
