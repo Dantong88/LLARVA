@@ -91,7 +91,7 @@ python setup.py develop
 
 #### 5. LLARVA-sim
 ```bash
-cd LLAVA/sim
+cd LLARVA/sim
 pip install -r requirements.txt
 python setup.py develop
 ```
