@@ -6,7 +6,7 @@ For the vision-action instruction pre-training, the implementation of LLARVA is 
 1. Clone this repository
 ```bash
 git clone https://github.com/Dantong88/LLARVA
-cd LLAVA
+cd LLARVA
 ```
 
 2. Install Package
