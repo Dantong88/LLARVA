@@ -211,7 +211,7 @@ We release our weights for "meat off grill" task in RLBench as follows (this is 
 <!-- ROW: retinanet_R_50_FPN_1x -->
 <tr><td align="left">LLARVA</td>
 <td align="center">7B</td>
-<td align="center">800 epsisodes of sweep_to_dustpan_of_size</th> in RLBench</td>
+<td align="center">800 episodes of sweep_to_dustpan_of_size</th> in RLBench</td>
 <td align="center">Vicuna-7B</td>
 <td align="center"><a href="https://drive.google.com/drive/folders/1uwCIFQ20a4yk5yOE073d82gELjM7_QaS?usp=sharing">Model</a></td>
 </tr>

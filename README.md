@@ -28,7 +28,7 @@ See [Vision-Action Instruction Pre-training.md](https://github.com/Dantong88/LLA
 
 ## Vision-Action Instruction Tuning
 For this part, we release full instruction to reproduce the results of simulation on [RLBench Benchmark](https://github.com/stepjam/RLBench). See
-[Vision-Action Instruction Tuning.md](https://github.com/Dantong88/LLARVA/blob/main/docs/Vision-Action_Instruction_Pre-training.md).
+[Vision-Action Instruction Tuning.md](https://github.com/Dantong88/LLARVA/blob/main/docs/Vision-Action_Instruction_Tuning.md).
 
 
 ## License
