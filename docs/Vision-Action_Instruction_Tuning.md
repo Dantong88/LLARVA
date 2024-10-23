@@ -92,6 +92,7 @@ python setup.py develop
 #### 5. LLARVA-sim
 ```bash
 cd LLARVA/sim
+pip install pip==24.0 # lower version of pip to support omegaconf==2.0.6
 pip install -r requirements.txt
 ```
 
@@ -229,9 +230,9 @@ rlbench.tasks=[sweep_to_dustpan_of_size] \
 rlbench.demo_path=$SIM_ROOT/data/val \
 framework.eval_from_eps_number=0 \
 framework.eval_episodes=10 \
-rlbench.episode_length=120 \
+rlbench.episode_length=150 \
 framework.gpu=4 \
-method.ckpt=path/to/llava-sweep_to_dustpan_of_size_merged
+method.ckpt=path/to/llava-sweep_to_dustpan_of_size_merged # this is the download merged ckpt
 ```
 
 

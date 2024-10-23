@@ -4,7 +4,7 @@ run_id=vision-action_instruction_pretraining_lora
 export WANDB_NAME=$run_id
 export WANDB_PROJECT=LLARVA
 
-deepspeed --include localhost:4,5,6,7 llava/train/train_mem.py \
+deepspeed --include localhost:0,1,2,3,4,5,6,7 llava/train/train_mem.py \
     --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path lmsys/vicuna-7b-v1.5 \
