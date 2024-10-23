@@ -37,6 +37,22 @@ git clone https://huggingface.co/liuhaotian/llava-v1.5-mlp2x-336px-pretrain-vicu
 ```
 
 ### Launch the Pre-training
+put the download data as the following structure:
+```angular2html
+LLARVA/data
+│ 
+└── annotations
+│   ├── train.json
+│   │   
+│   └── val.json
+│
+└── images (unzip the images.tar.gz)
+│
+└── prepare_question_file.py
+    ... 
+```
+
+start to train:
 ```angular2html
 bash scripts/v1_5/vision-action_instruction_pretraining_lora.sh
 ```

@@ -9,8 +9,8 @@ deepspeed --include localhost:0,1,2,3,4,5,6,7 llava/train/train_mem.py \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path lmsys/vicuna-7b-v1.5 \
     --version v1 \
-    --data_path /scratch/partial_datasets/rlbench/release_oxe/annotations/train.json::/scratch/partial_datasets/rlbench/release_oxe/annotations/val.json \
-    --image_folder /scratch/partial_datasets/rlbench/release_oxe/ \
+    --data_path data/annotations/train.json::data/annotations/val.json \
+    --image_folder data/ \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --pretrain_mm_mlp_adapter llava-v1.5-mlp2x-336px-pretrain-vicuna-7b-v1.5/mm_projector.bin \
     --mm_projector_type mlp2x_gelu \

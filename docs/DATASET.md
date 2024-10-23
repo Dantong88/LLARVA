@@ -11,7 +11,7 @@ demonstrations and transfer them to the annotation format using in [LLaVA](https
 ```angular2html
 train/val.json
 │ 
-└── image/instruction pair 1
+└── image-instruction pair 1
 │   ├── conversations 
 │   │   ├── human 
 │   │   │   └── (A string. Instruction from human, including conditions like robot type, robot state, task and ask agent to predict n step action and visual traces.)
@@ -25,7 +25,7 @@ train/val.json
 │   └── id 
 │       └── (A int. Annotation index.)         
 │
-└── image/instruction pair 2
+└── image-instruction pair 2
     ... 
 ```
 
