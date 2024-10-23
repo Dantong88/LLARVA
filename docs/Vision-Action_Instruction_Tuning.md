@@ -93,7 +93,6 @@ python setup.py develop
 ```bash
 cd LLARVA/sim
 pip install -r requirements.txt
-python setup.py develop
 ```
 
 ***

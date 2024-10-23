@@ -11,7 +11,7 @@ cd LLARVA
 
 2. Install Package
 ```Shell
-conda create -n llarva python=3.10 -y
+conda create -n llarva python=3.8.1 -y
 conda activate llarva
 pip install --upgrade pip  # enable PEP 660 support
 pip install -e .

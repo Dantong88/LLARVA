@@ -1,6 +1,6 @@
 method:
     name: "LLARVA"
-    ckpt: /scratch/partial_datasets/llarva/exp/checkpoints/corl_merge/llava-v1.5-7b-lora_ft_corl_meat_off_grill_pretrained_trajectories_8gpu_b16_4epochs_1e-4
+    ckpt: /scratch/partial_datasets/llarva/exp/checkpoints/corl_merge/llava-v1.5-7b-lora_ft_corl_sweep_to_dustpan_of_size_pretrained_trajectories_8gpu_b16_4epochs_1e-4
     with_visual_trace: False
 
 rlbench:
