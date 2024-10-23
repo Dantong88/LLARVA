@@ -3,3 +3,5 @@
 /llava.egg-info/
 /wandb/
 /data/
+/sim/PyRep/
+/sim/data/val/

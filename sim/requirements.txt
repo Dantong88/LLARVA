@@ -1,0 +1,14 @@
+absl-py==0.15.0
+einops==0.3.2
+ftfy
+gdown==3.13.1
+hydra-core==1.0.5
+matplotlib
+numpy==1.21
+packaging==21.3
+pandas==1.4.1
+pyrender==0.1.45
+regex
+scipy==1.4.1
+tensorboard
+trimesh==3.9.34
