@@ -14,9 +14,9 @@ In recent years, instruction-tuned Large Multimodal Models (LMMs) have been succ
 
 ## Release
 
-- [2024/10/19] 🔥 Release the instruction tuning Dataset of **LLARVA**. Including 8.5M image-visual trace pairs from [OXE](https://github.com/google-deepmind/open_x_embodiment).
-Release our [End-Effector Detector](https://github.com/Dantong88/Gripper_detector). 
-- [2024/10/20] 🔥 Release the vision-action instruction pre-training/tuning model. Release instruction to reproduce results on simulation.
+- [2024/10/19] 🔥 Released our instruction tuning dataset, including 8.5M image-visual trace pairs from [OXE](https://github.com/google-deepmind/open_x_embodiment).
+Released our [End-Effector Detector](https://github.com/Dantong88/Gripper_detector). 
+- [2024/10/20] 🔥 Released the vision-action instruction pre-training/tuning model. Released instructions to reproduce results on simulation.
 
 
 
@@ -27,12 +27,12 @@ See [DATASET.md](https://github.com/Dantong88/LLARVA/blob/main/docs/DATASET.md).
 See [Vision-Action Instruction Pre-training.md](https://github.com/Dantong88/LLARVA/blob/main/docs/Vision-Action_Instruction_Pre-training.md).
 
 ## Vision-Action Instruction Tuning
-For this part, we release full instruction to reproduce the results of simulation on [RLBench Benchmark](https://github.com/stepjam/RLBench). See
+For this part, we release instructions to reproduce the simulation results on the [RLBench Benchmark](https://github.com/stepjam/RLBench). See
 [Vision-Action Instruction Tuning.md](https://github.com/Dantong88/LLARVA/blob/main/docs/Vision-Action_Instruction_Tuning.md).
 
 
 ## License
-LLARVA is licensed under the [Apache](LICENSE), If you later add other third party code, please keep this license info updated, and please let us know if that component is licensed under something other than CC-BY-NC, MIT, or CC0.
+LLARVA is licensed under [Apache](LICENSE), If you later add other third party code, please keep this license info updated, and please let us know if that component is licensed under something other than CC-BY-NC, MIT, or CC0.
 
 
 ## How to get support from us?
