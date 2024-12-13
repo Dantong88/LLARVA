@@ -9,7 +9,7 @@ git clone https://github.com/Dantong88/LLARVA
 cd LLARVA
 ```
 
-2. Install Package
+2. Install the llarva package
 ```Shell
 conda create -n llarva python=3.8.1 -y
 conda activate llarva
@@ -29,15 +29,15 @@ pip install flash-attn --no-build-isolation
 
 ### Prepare the Data
 
-1. See [DATASET.md]() to download both image.zip file and annotations, put them under ./data folder.
-2. Download off-the-shelf projector weights, and put it under the LLARVA
+1. See [DATASET.md]() to download both the image.zip file and annotations, put them under ./data folder.
+2. Download off-the-shelf projector weights, and put it under the LLARVA folder:
 ```angular2html
 cd LLARVA
 git clone https://huggingface.co/liuhaotian/llava-v1.5-mlp2x-336px-pretrain-vicuna-7b-v1.5
 ```
 
 ### Launch the Pre-training
-put the download data as the following structure:
+Make sure the structure of the folder looks like this:
 ```angular2html
 LLARVA/data
 │ 
@@ -52,7 +52,7 @@ LLARVA/data
     ... 
 ```
 
-start to train:
+To start training:
 ```angular2html
 bash scripts/v1_5/vision-action_instruction_pretraining_lora.sh
 ```
@@ -64,10 +64,10 @@ After training, you should first merge the lora weights by running:
 ```angular2html
 python scripts/merge_lora_weights.py --model-path 'path/to/your/lora-weights' --model-base 'lmsys/vicuna-7b-v1.5' --save-model-path 'your/path'
 ```
-*Note that your ``save-model-path`` should include word ``llava``, otherwise, you might get error.*
+*Note that your ``save-model-path`` should include the word ``llava``, otherwise, you might get an error.*
 
 
-We release our weights as follows (this is the un-merged lora weights, i.e. you need to run the above command to merge it before using it in inference):
+We release our weights as follows (these are the un-merged lora weights, i.e. you need to run the above command to merge it before you can run inference):
 
 #### Lora Weight
 <!--
@@ -94,8 +94,8 @@ We release our weights as follows (this is the un-merged lora weights, i.e. you 
 
 2. Run inference.
 
-First, you should generate your question file, for questioning the model. We provide the smaller [question examples sets](https://drive.google.com/file/d/1O9jFAgy9wzoOVSs3x2Uox3gJb9F3I6Rz/view?usp=sharing) including
-100 qestions, you can download it and put it in data folder.
+First, you should generate your question file for questioning the model. We provide the smaller [question examples sets](https://drive.google.com/file/d/1O9jFAgy9wzoOVSs3x2Uox3gJb9F3I6Rz/view?usp=sharing) including
+100 questions, which you can download and put in the ``data`` folder.
 
 You can easily test the model by running:
 
@@ -104,5 +104,5 @@ You can easily test the model by running:
 python llava/eval/model_vqa.py --model-path 'path/to/merged/model' --image-folder 'data'  --question-file 'data/test_questions.jsonl' --answers-file 'data/answers.jsonl'
 ```
 
-The results are saved as jsonl file, you can simply read or plot the predicted visual trace by reading the jsonl file.
+The results are saved as a jsonl file, you can simply read it or alternatively plot the predicted visual trace by parsing the jsonl file.
 
