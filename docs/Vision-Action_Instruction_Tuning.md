@@ -1,15 +1,14 @@
 ## Vision-Action Instruction Tuning
 
-When used the pre-training model in a specific downstream task, i.e. robot manipulation tasks, we need to further 
-do instruction tuning using collected demonstrations in the new environment setting. In this repo, we provide instructions to reproduce the 
-application in [RLBench Benchmark](https://github.com/stepjam/RLBench).
+When using the pre-training model in a specific downstream task, i.e. robot manipulation tasks, we need to further 
+do instruction tuning using collected demonstrations in the new environment setting. In this repo, we provide instructions to reproduce our model for the [RLBench Benchmark](https://github.com/stepjam/RLBench).
 
-Our code is built based mainly on [PerAct](https://github.com/peract/peract) and [RLBench](https://github.com/stepjam/RLBench), make sure you might need to
-cite them if find it useful. 
+Our code is built mainly on [PerAct](https://github.com/peract/peract) and [RLBench](https://github.com/stepjam/RLBench), so make sure to
+cite them if you find the code useful! 
 
-The following content including 4 parts:
+The following content is divided into 4 parts:
 * Simulation Environment Installation
-* Prepare Simulation Data
+* Preparing Simulation Data
 * Instruction Tuning
 * Inference
 
@@ -116,20 +115,20 @@ python dataset_generator.py --tasks=sweep_to_dustpan_of_size \
                             --all_variations=True
 ```
 
-After this, you will generate 10 demos in ``$SIM_ROOT/data/val``, you maybe need to generate more demos using in training.
+This example command will generate 10 demos in ``$SIM_ROOT/data/val``, note that you will likely need to generate more demos for training.
 
 #### 2. Adapt the Format (Skip if you only want to test the model)
 
 Before using the demos to do vision-action tuning, you should first transfer the format to get annotations.
-We provide script as follows:
+We provide a script that can be used as follows:
 ```angular2html
 cd /LLARVA/sim
 python generate_vision-action-tuning_anns.py --data-path data/val --save-path data/anns/train.json --selected-task sweep_to_dustpan_of_size
 ```
-You will get ``train.json`` in ``data/anns`` folder, which can further be used in vision-action instruction tuning.
+You will now see the file ``train.json`` in ``data/anns`` folder, which can further be used for vision-action instruction tuning.
 
-We also provide the one example of the generated demos [800 sweep_to_dustpan_of_size](https://drive.google.com/file/d/14EbwEPJwmqjKNpoPr6rXiv_2W1J2DkNu/view?usp=sharing) and its processed annotations[annotations](https://drive.google.com/drive/folders/1JQouifNi3sZMMYolE4Oqp8fR6H78sdlf?usp=sharing), including two version: with/without
-visual traces, you can download and put them with the following structure:
+We also provide one example of the generated demos [800 sweep_to_dustpan_of_size](https://drive.google.com/file/d/14EbwEPJwmqjKNpoPr6rXiv_2W1J2DkNu/view?usp=sharing) and its processed [annotations](https://drive.google.com/drive/folders/1JQouifNi3sZMMYolE4Oqp8fR6H78sdlf?usp=sharing), for two versions (with/without
+visual traces). You can download these files and put them in the following structure:
 
 ```angular2html
 LLARVA/sim
@@ -152,10 +151,10 @@ LLARVA/sim
 ***
 
 ### Instruction Tuning
-After get the training annotations, you can follow the following steps to adapt the pre-trained model to specific downstream task.
+After getting the training annotations, you can follow these steps to adapt the pre-trained model to a specific downstream task:
 
-#### 1. Put the Pre-training Weight
-(download in [Vision-Action Instruction Pre-training.md](https://github.com/Dantong88/LLARVA/blob/main/docs/Vision-Action_Instruction_Pre-training.md)) in the output folder, for example:
+#### 1. Put the Pre-training Model
+Copy the pre-trained model to the output folder, for example:
 ```angular2html
 cd LLARVA/sim
 mkdir output
@@ -166,8 +165,8 @@ cp -r the/path/pretrained_model  llava-lora-instruction-tuning-sweep_to_dustpan_
 
 ####  2. Fix the Package Incompatibilities.
 
-We find some incompatibilities of the ``deepspeed`` and ``transformers``
-package with our fine-tuning code, so you need to go to your conda llarva environment (common in ``anaconda3/envs/llarva/lib/python3.10/sitpackages/``), then manually modify source package as follows:
+We found some incompatibilities of the ``deepspeed`` and ``transformers``
+package with our fine-tuning code, so you need to go to your conda llarva environment (commonly in ``anaconda3/envs/llarva/lib/python3.10/sitepackages/``), then manually modify the source package as follows:
 
 * Set ``load_module_strict = False, load_optimizer_states=False, load_lr_scheduler_states=False`` in [transformers/integrations/deepspeed.py](https://github.com/huggingface/transformers/blob/21d5025826857e11a75ef7b23ac15a607be4fc54/src/transformers/integrations/deepspeed.py#L438)
 * Comment out the whole ``try-except`` block in [transformers/generation/configuration_utils.py](https://github.com/huggingface/transformers/blob/32590b5ecb50f1c56be32cb0e686196be9427f2f/src/transformers/generation/configuration_utils.py#L827)
@@ -189,10 +188,10 @@ After training, you should first merge the lora weights by running:
 ```angular2html
 python scripts/merge_lora_weights.py --model-path 'path/to/your/lora-weights' --model-base 'lmsys/vicuna-7b-v1.5' --save-model-path 'your/path'
 ```
-*Note that your ``save-model-path`` should include word ``llava``, otherwise, you might get error.*
+*Note that your ``save-model-path`` should include the word ``llava``, otherwise, you might get an error.*
 
 
-We release our weights for "meat off grill" task in RLBench as follows (this is the merged final weights, i.e. you do not need to run the above command to merge it before using it in inference):
+We release our weights for the "meat off grill" task in RLBench as follows (these are the merged final weights, i.e. you do not need to run the above command to merge it before using it in inference):
 
 #### Lora Weight
 <!--
